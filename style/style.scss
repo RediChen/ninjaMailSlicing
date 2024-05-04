@@ -1,6 +1,11 @@
+//imported font
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 //THEME COLOR
 $color-prime: #4BA87D;
 
-@import './mixin.scss';
-@import './base.scss';
-@import './top-header.scss';
+@import './_mixin.scss';
+@import './_base.scss';
+@import './_modules.scss';
+@import './_top-header.scss';
+@import './_top-page.scss';

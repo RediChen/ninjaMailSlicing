@@ -1,0 +1,27 @@
+.fx-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nj-btn {
+    padding-block: 12px;
+    width: 10rem;
+    font-family: Raleway;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.btn-fill {
+    @extend .nj-btn;
+    background-color: $color-prime;
+    color: white;
+    border: 3px solid $color-prime;
+}
+
+.btn-frame {
+    @extend .nj-btn;
+    background-color: white;
+    color: $color-prime;
+    border: 3px solid $color-prime;
+}

@@ -1,0 +1,20 @@
+.top-page {
+    background: url(../images/bg1.png) top left / cover no-repeat, white;
+}
+
+.top-page-ctn {
+    display: inline-flex;
+    flex-direction: column;
+    max-width: 420px;
+    gap: 1rem;
+
+    h1 {
+        font-family: 'Playfair Display';
+        font-weight: 900;
+    }
+
+    p {
+        font-family: raleway;
+        font-weight: 500;
+    }
+}

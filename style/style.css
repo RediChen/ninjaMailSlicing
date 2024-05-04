@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+.fx-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nj-btn, .btn-frame, .btn-fill {
+  padding-block: 12px;
+  width: 10rem;
+  font-family: Raleway;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.btn-fill {
+  background-color: #4BA87D;
+  color: white;
+  border: 3px solid #4BA87D;
+}
+
+.btn-frame {
+  background-color: white;
+  color: #4BA87D;
+  border: 3px solid #4BA87D;
+}
+
+.top-page {
+  background: url(../images/bg1.png) top left/cover no-repeat, white;
+}
+
+.top-page-ctn {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 420px;
+  gap: 1rem;
+}
+.top-page-ctn h1 {
+  font-family: "Playfair Display";
+  font-weight: 900;
+}
+.top-page-ctn p {
+  font-family: raleway;
+  font-weight: 500;
+}
