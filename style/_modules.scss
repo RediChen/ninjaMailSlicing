@@ -1,27 +1,56 @@
+//===== mixins =====
+@mixin nj-btn {
+    padding-block: 0.75rem;
+    font-family: Raleway;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    border: 5px solid $color-prime;
+
+    font-size: 1rem;
+
+    @media screen and (min-width: 768px) {
+        font-size: 1.5rem;
+
+    }
+}
+
+@mixin ff-raleway($fw, $fz: 0) {
+    font-family: 'Raleway', sans;
+    font-weight: $fw;
+
+    @if ($fz !=0) {
+        font-size: $fz;
+    }
+}
+
+@mixin ff-plafairy($fw, $fz: 0) {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: $fw;
+
+    @if ($fz !=0) {
+        font-size: $fz;
+    }
+}
+
+//module class
+.object-fit-cover {
+    width: 100%;
+}
+
 .fx-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.nj-btn {
-    padding-block: 12px;
-    width: 10rem;
-    font-family: Raleway;
-    font-size: 1rem;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-}
 
 .btn-fill {
-    @extend .nj-btn;
+    @include nj-btn;
     background-color: $color-prime;
     color: white;
-    border: 3px solid $color-prime;
 }
 
 .btn-frame {
-    @extend .nj-btn;
+    @include nj-btn;
     background-color: white;
     color: $color-prime;
-    border: 3px solid $color-prime;
 }

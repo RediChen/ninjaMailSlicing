@@ -1,0 +1,21 @@
+//imported font
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    font-size: 12px;
+
+    @media screen and (min-width: 766px) {
+        font-size: 16px;
+    }
+}
+
+//THEME COLOR
+$white: #fff;
+$black: #000;
+$color-prime: #4BA87D;
+$top-header-h: 100px;
+
+//reset
+a:link, a:visited {
+    text-decoration: none;
+}

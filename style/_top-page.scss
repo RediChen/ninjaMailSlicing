@@ -1,20 +1,53 @@
-.top-page {
-    background: url(../images/bg1.png) top left / cover no-repeat, white;
-}
+.hero {
+    margin-top: $top-header-h;
+    background: url(../images/bg1.png) 0 24px / cover no-repeat, white;
 
-.top-page-ctn {
+    >.container {
+        display: flex;
+        align-items: center;
+
+        .hero-ctn {
+            z-index: 1;
+        }
+
+        .hero-img {
+            //todo 待研究 rwd
+            margin-left: calc( 0px - 2rem - 5vw);
+        }
+    }
+}
+//ref: display-3
+//font-size:4rem (min-width:1200px)
+//font-size:calc(1.525rem + 3.3vw)
+
+.hero-ctn {
     display: inline-flex;
     flex-direction: column;
-    max-width: 420px;
+    width: calc(15rem + 45vw);
+    max-width: calc(32rem + 3vw);
     gap: 1rem;
 
     h1 {
-        font-family: 'Playfair Display';
-        font-weight: 900;
+        @include ff-plafairy(900);
     }
 
     p {
-        font-family: raleway;
-        font-weight: 500;
+        @include ff-raleway(500);
+    }
+
+    button {
+        width: 13rem;
+    }
+}
+
+.hero-img {
+    width: 600px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
+    img {
+        // object-fit: contain;
+        object-position: 50% 50%;
+
     }
 }

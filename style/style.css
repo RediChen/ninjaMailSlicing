@@ -1,46 +1,141 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+html {
+  font-size: 12px;
+}
+@media screen and (min-width: 766px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+.object-fit-cover {
+  width: 100%;
+}
+
 .fx-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nj-btn, .btn-frame, .btn-fill {
-  padding-block: 12px;
-  width: 10rem;
+.btn-fill {
+  padding-block: 0.75rem;
   font-family: Raleway;
-  font-size: 1rem;
   font-weight: 900;
   letter-spacing: 1.5px;
-}
-
-.btn-fill {
+  border: 5px solid #4BA87D;
+  font-size: 1rem;
   background-color: #4BA87D;
   color: white;
-  border: 3px solid #4BA87D;
+}
+@media screen and (min-width: 768px) {
+  .btn-fill {
+    font-size: 1.5rem;
+  }
 }
 
 .btn-frame {
+  padding-block: 0.75rem;
+  font-family: Raleway;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  border: 5px solid #4BA87D;
+  font-size: 1rem;
   background-color: white;
   color: #4BA87D;
-  border: 3px solid #4BA87D;
+}
+@media screen and (min-width: 768px) {
+  .btn-frame {
+    font-size: 1.5rem;
+  }
 }
 
-.top-page {
-  background: url(../images/bg1.png) top left/cover no-repeat, white;
+.top-header {
+  background-color: #fff;
+  max-height: 100px;
+  z-index: 99;
 }
 
-.top-page-ctn {
-  display: inline-flex;
-  flex-direction: column;
-  max-width: 420px;
-  gap: 1rem;
+.top-logo img {
+  height: 64px;
 }
-.top-page-ctn h1 {
-  font-family: "Playfair Display";
+.top-logo h1 {
+  margin-left: -1rem;
+  font-family: "Raleway", sans;
   font-weight: 900;
 }
-.top-page-ctn p {
-  font-family: raleway;
+
+.top-nav-ul {
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.top-nav-ul a {
+  display: block;
+  border-bottom: 6px solid #4BA87D;
+  font-family: "Raleway", sans;
+  font-weight: 800;
+  text-align: center;
+  color: #000;
+}
+@media screen and (min-width: 1200px) {
+  .top-nav-ul a {
+    width: 110px;
+  }
+}
+.top-nav-ul .top-btn-wrap {
+  min-width: 60%;
+}
+.top-nav-ul .top-btn-wrap > .btn-fill {
+  font-size: 1rem;
+  text-align: center;
+  flex-basis: 10rem;
+}
+
+.hero {
+  margin-top: 100px;
+  background: url(../images/bg1.png) 0 24px/cover no-repeat, white;
+}
+.hero > .container {
+  display: flex;
+  align-items: center;
+}
+.hero > .container .hero-ctn {
+  z-index: 1;
+}
+.hero > .container .hero-img {
+  margin-left: calc(0px - 2rem - 5vw);
+}
+
+.hero-ctn {
+  display: inline-flex;
+  flex-direction: column;
+  width: calc(15rem + 45vw);
+  max-width: calc(32rem + 3vw);
+  gap: 1rem;
+}
+.hero-ctn h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 900;
+}
+.hero-ctn p {
+  font-family: "Raleway", sans;
   font-weight: 500;
+}
+.hero-ctn button {
+  width: 13rem;
+}
+
+.hero-img {
+  width: 600px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.hero-img img {
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }

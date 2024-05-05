@@ -1,0 +1,45 @@
+.top-header {
+    background-color: $white;
+    max-height: $top-header-h;
+    z-index: 99;
+}
+
+.top-logo {
+    img {
+        height: 64px;
+    }
+
+    h1 {
+        margin-left: -1rem;
+        @include ff-raleway(900);
+    }
+}
+
+.top-nav-ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+        display: block;
+        border-bottom: 6px solid $color-prime;
+        @include ff-raleway(800);
+        text-align: center;
+        color: $black;
+
+        @media screen and (min-width: 1200px) {
+            width: 110px;
+
+        }
+    }
+
+    .top-btn-wrap {
+        min-width: 60%;
+
+        >.btn-fill {
+            font-size: 1rem;
+            text-align: center;
+            flex-basis: 10rem;
+        }
+    }
+}
