@@ -5,15 +5,17 @@
     >.container {
         display: flex;
         align-items: center;
+    }
+    &-box {
+        max-width: 100%;
+    }
+    &-ctn {
+        z-index: 1;
+    }
 
-        .hero-ctn {
-            z-index: 1;
-        }
-
-        .hero-img {
-            //todo 待研究 rwd
-            margin-left: calc( 0px - 2rem - 5vw);
-        }
+    &-img {
+        //todo 待研究 rwd
+        margin-left: calc( 0px - 2rem - 5vw);
     }
 }
 //ref: display-3

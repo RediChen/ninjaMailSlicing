@@ -1,0 +1,26 @@
+main {
+    height: 300vh;
+    //todo remove height
+    background: no-repeat 0 0 / 100% auto url("../images/bg.png");
+}
+.reach-more {
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    background-image: url("../images/main-img.png");
+    text-align: center;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        width: 75%;
+    }
+
+    h2 {
+        @include ff-plafairy(900);
+        color: $white;
+    }
+
+    &-btn {
+        padding: 1rem 2rem;
+        border: none;
+    }
+}

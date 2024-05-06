@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   font-size: 12px;
@@ -54,7 +55,16 @@ a:link, a:visited {
   }
 }
 
+/* 架構
+-.top-header
+    └-.container-xl
+        └-.top-logo
+            └-img + h1
+        └-.top-btn-wrap
+            └-nav + a.btn-fill
+*/
 .top-header {
+  max-width: 100vw;
   background-color: #fff;
   max-height: 100px;
   z-index: 99;
@@ -67,6 +77,15 @@ a:link, a:visited {
   margin-left: -1rem;
   font-family: "Raleway", sans;
   font-weight: 900;
+}
+
+.top-btn-wrap {
+  min-width: 60%;
+}
+.top-btn-wrap > .btn-fill {
+  font-size: 1rem;
+  text-align: center;
+  flex-basis: 10rem;
 }
 
 .top-nav-ul {
@@ -87,14 +106,6 @@ a:link, a:visited {
     width: 110px;
   }
 }
-.top-nav-ul .top-btn-wrap {
-  min-width: 60%;
-}
-.top-nav-ul .top-btn-wrap > .btn-fill {
-  font-size: 1rem;
-  text-align: center;
-  flex-basis: 10rem;
-}
 
 .hero {
   margin-top: 100px;
@@ -104,10 +115,13 @@ a:link, a:visited {
   display: flex;
   align-items: center;
 }
-.hero > .container .hero-ctn {
+.hero-box {
+  max-width: 100%;
+}
+.hero-ctn {
   z-index: 1;
 }
-.hero > .container .hero-img {
+.hero-img {
   margin-left: calc(0px - 2rem - 5vw);
 }
 
@@ -138,4 +152,31 @@ a:link, a:visited {
 .hero-img img {
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+}
+
+main {
+  height: 300vh;
+  background: no-repeat 0 0/100% auto url("../images/bg.png");
+}
+
+.reach-more {
+  margin: 0 auto;
+  aspect-ratio: 16/9;
+  background-image: url("../images/main-img.png");
+  text-align: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .reach-more {
+    width: 75%;
+  }
+}
+.reach-more h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+.reach-more-btn {
+  padding: 1rem 2rem;
+  border: none;
 }
