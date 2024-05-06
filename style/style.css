@@ -230,3 +230,33 @@ main {
   font-size: 1.25rem;
   padding-right: 3rem;
 }
+
+.story-case {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .story-case {
+    flex-direction: row;
+  }
+}
+.story-case > div {
+  width: 100%;
+  height: 157px;
+}
+@media screen and (min-width: 992px) {
+  .story-case > div {
+    height: 239px;
+  }
+}
+.story-case > div:nth-child(1) {
+  background: center/cover url("../images/artilce3.png");
+}
+.story-case > div:nth-child(2) {
+  background: center/cover url("../images/artilce4.png");
+}
+.story-case > div:nth-child(3) {
+  background: center/cover url("../images/artilce5.png");
+}
