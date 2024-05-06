@@ -156,11 +156,12 @@ a:link, a:visited {
 
 main {
   height: 300vh;
-  background: center/cover no-repeat url("../images/bg.png");
+  padding-top: 10rem;
+  background: 0 0/100% auto no-repeat url("../images/bg.png");
 }
 
 .reach-more {
-  margin: 0 auto;
+  margin: 0 auto 10rem;
   aspect-ratio: 16/9;
   background-image: url("../images/main-img.png");
   text-align: center;
@@ -183,7 +184,7 @@ main {
 
 .features {
   height: 450px;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: end;
 }
 .features .card:first-child {

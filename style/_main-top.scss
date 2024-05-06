@@ -1,10 +1,11 @@
 main {
     height: 300vh;
     //todo remove height
-    background: center / cover no-repeat url("../images/bg.png");
+    padding-top: 10rem;
+    background: 0 0 / 100% auto no-repeat url("../images/bg.png");
 }
 .reach-more {
-    margin: 0 auto;
+    margin: 0 auto 10rem;
     aspect-ratio: 16 / 9;
     background-image: url("../images/main-img.png");
     text-align: center;
