@@ -164,12 +164,15 @@ a:link, a:visited {
 
 main {
   height: 300vh;
-  padding-top: 10rem;
+  padding-top: 1px;
   background: 0 0/100% auto no-repeat url("../images/bg.png");
+}
+main article {
+  margin-top: 10rem;
 }
 
 .reach-more {
-  margin: 0 auto 10rem;
+  margin-inline: auto;
   aspect-ratio: 16/9;
   background-image: url("../images/main-img.png");
   text-align: center;
@@ -231,6 +234,10 @@ main {
   padding-right: 3rem;
 }
 
+.stories {
+  margin-top: 10rem;
+}
+
 .story-case {
   display: flex;
   flex-direction: column;
@@ -243,13 +250,28 @@ main {
   }
 }
 .story-case > div {
+  padding: 1rem;
   width: 100%;
   height: 157px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.story-case > div * {
+  margin: 0;
 }
 @media screen and (min-width: 992px) {
   .story-case > div {
     height: 239px;
   }
+}
+.story-case > div h2 {
+  font-family: "Raleway", sans;
+  font-weight: 900;
+}
+.story-case > div h4 {
+  font-family: "Raleway", sans;
+  font-weight: 700;
 }
 .story-case > div:nth-child(1) {
   background: center/cover url("../images/artilce3.png");
