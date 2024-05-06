@@ -1,0 +1,38 @@
+.features {
+    height: 450px;
+    justify-content: space-around;
+    align-items: end;
+    .card:first-child {
+        align-self: start;
+    }
+    .card {
+        width: 210px;
+
+        @include rwd-above('lg') {
+            width: 320px;
+        }
+
+        p {
+            @include ff-raleway(500);
+        }
+
+        a {
+            @include ff-raleway(800);
+
+            &:link,
+            &:visited {
+                color: $color-prime;
+            }
+        }
+    }
+    .info {
+        width: 25rem;
+        h2 {
+            @include ff-plafairy(900);
+        }
+        p {
+            @include ff-raleway(400, 1.25rem);
+            padding-right: 3rem;
+        }
+    }
+}

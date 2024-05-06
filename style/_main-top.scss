@@ -1,7 +1,7 @@
 main {
     height: 300vh;
     //todo remove height
-    background: no-repeat 0 0 / 100% auto url("../images/bg.png");
+    background: center / cover no-repeat url("../images/bg.png");
 }
 .reach-more {
     margin: 0 auto;

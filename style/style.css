@@ -156,7 +156,7 @@ a:link, a:visited {
 
 main {
   height: 300vh;
-  background: no-repeat 0 0/100% auto url("../images/bg.png");
+  background: center/cover no-repeat url("../images/bg.png");
 }
 
 .reach-more {
@@ -179,4 +179,45 @@ main {
 .reach-more-btn {
   padding: 1rem 2rem;
   border: none;
+}
+
+.features {
+  height: 450px;
+  justify-content: space-around;
+  align-items: end;
+}
+.features .card:first-child {
+  align-self: start;
+}
+.features .card {
+  width: 210px;
+}
+@media screen and (min-width: 992px) {
+  .features .card {
+    width: 320px;
+  }
+}
+.features .card p {
+  font-family: "Raleway", sans;
+  font-weight: 500;
+}
+.features .card a {
+  font-family: "Raleway", sans;
+  font-weight: 800;
+}
+.features .card a:link, .features .card a:visited {
+  color: #4BA87D;
+}
+.features .info {
+  width: 25rem;
+}
+.features .info h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 900;
+}
+.features .info p {
+  font-family: "Raleway", sans;
+  font-weight: 400;
+  font-size: 1.25rem;
+  padding-right: 3rem;
 }
