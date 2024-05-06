@@ -1,23 +1,37 @@
 .hero {
     margin-top: $top-header-h;
-    background: url(../images/bg1.png) 0 24px / cover no-repeat, white;
+    background: url(../images/bg1.png) 0 0 / 100% auto no-repeat, white;
 
-    >.container {
+    &-box {
+        // max-width: 100%;
+        min-height: calc(100vh - #{$top-header-h});
         display: flex;
         align-items: center;
+        flex-direction: column;
+        @include rwd-above('md') {
+            flex-direction: row;
+        }
     }
-    &-box {
-        max-width: 100%;
-    }
+
     &-ctn {
         z-index: 1;
     }
 
     &-img {
-        //todo 待研究 rwd
-        margin-left: calc( 0px - 2rem - 5vw);
+        margin-left: calc(0px - 2rem - 5vw);
+        aspect-ratio: 16 / 9;
+        width: 300px;
+
+        @include rwd-above('md') {
+            width: 445px;
+        }
+
+        @include rwd-above('lg') {
+            width: 680px;
+        }
     }
 }
+
 //ref: display-3
 //font-size:4rem (min-width:1200px)
 //font-size:calc(1.525rem + 3.3vw)
@@ -39,17 +53,5 @@
 
     button {
         width: 13rem;
-    }
-}
-
-.hero-img {
-    width: 600px;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-
-    img {
-        // object-fit: contain;
-        object-position: 50% 50%;
-
     }
 }

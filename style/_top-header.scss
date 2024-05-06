@@ -7,17 +7,20 @@
             └-nav + a.btn-fill
 */
 .top-header {
-    max-width: 100vw;
-    //todo: remove
     background-color: $white;
-    max-height: $top-header-h;
     z-index: 99;
+
+    >.hstack {
+        height: $top-header-h;
+
+    }
 }
 
 .top-logo {
     img {
         height: 64px;
     }
+
     h1 {
         margin-left: -1rem;
         @include ff-raleway(900);
@@ -33,6 +36,7 @@
         flex-basis: 10rem;
     }
 }
+
 .top-nav-ul {
     margin: 0;
     display: flex;
@@ -44,6 +48,7 @@
         @include ff-raleway(800);
         text-align: center;
         color: $black;
+        letter-spacing: 1.27px;
 
         @media screen and (min-width: 1200px) {
             width: 110px;
