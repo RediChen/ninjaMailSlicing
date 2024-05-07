@@ -109,31 +109,72 @@ a:link, a:visited {
   }
 }
 
+/* 架構
+-.hero
+    └-.container
+        └-.hero-wrap
+            └-h1.hero-title
+            └-.hero-ctn > p + div > btn*2
+            └-.hero-img
+*/
 .hero {
   margin-top: 100px;
+  min-height: calc(100vh - 100px);
   background: url(../images/bg1.png) 0 0/100% auto no-repeat, white;
 }
-.hero-box {
-  min-height: calc(100vh - 100px);
+.hero-wrap {
+  box-shadow: inset 0 0 10px red;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
-@media screen and (min-width: 768px) {
-  .hero-box {
-    flex-direction: row;
+@media screen and (min-width: 576px) {
+  .hero-wrap {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
   }
 }
-.hero-ctn {
+.hero-title {
+  border: 3px solid purple;
+  width: 300px;
   z-index: 1;
 }
+@media screen and (min-width: 576px) {
+  .hero-title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+.hero-title h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 900;
+}
+.hero-ctn {
+  width: 300px;
+  border: 3px solid green;
+  z-index: 1;
+  order: 1;
+}
+@media screen and (min-width: 576px) {
+  .hero-ctn {
+    order: initial;
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
 .hero-img {
-  margin-left: calc(0px - 2rem - 5vw);
-  aspect-ratio: 16/9;
+  border: 3px solid navy;
+  margin-left: 0;
+  margin-top: calc(0px - 8rem);
+  align-self: center;
   width: 300px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .hero-img {
+    margin-left: calc(0px - 2rem - 5vw);
+    grid-column: 2;
+    grid-row: 1/3;
     width: 445px;
   }
 }
@@ -143,23 +184,21 @@ a:link, a:visited {
   }
 }
 
-.hero-ctn {
-  display: inline-flex;
-  flex-direction: column;
-  width: calc(15rem + 45vw);
-  max-width: calc(32rem + 3vw);
-  gap: 1rem;
+.hero-ctn-membrane {
+  border: 3px solid gold;
 }
-.hero-ctn h1 {
-  font-family: "Playfair Display", sans-serif;
-  font-weight: 900;
-}
-.hero-ctn p {
+.hero-ctn-membrane p {
   font-family: "Raleway", sans;
   font-weight: 500;
+  font-size: 1.25rem;
 }
-.hero-ctn button {
-  width: 13rem;
+.hero-ctn-membrane button {
+  width: 140px;
+}
+@media screen and (min-width: 576px) {
+  .hero-ctn-membrane button {
+    width: 13rem;
+  }
 }
 
 main {
