@@ -292,16 +292,18 @@ main article {
 .stories .title {
   margin: 0 auto;
 }
-@media screen and (min-width: 992px) {
-  .stories .title {
-    width: 60%;
-  }
-}
 .stories .title h2 {
+  text-align: center;
   font-family: "Playfair Display", sans-serif;
   font-weight: 900;
-  font-size: 2.5rem;
-  text-align: center;
+  font-size: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .stories .title h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
 }
 
 .story-case {
@@ -335,6 +337,11 @@ main article {
   font-family: "Raleway", sans;
   font-weight: 900;
 }
+@media screen and (min-width: 992px) {
+  .story-case > div h2 {
+    width: 60%;
+  }
+}
 .story-case > div h4 {
   font-family: "Raleway", sans;
   font-weight: 700;
@@ -350,12 +357,42 @@ main article {
 }
 
 .story-text-subscribe .input-box .form-control {
-  width: 100%;
   padding-block: 0.75rem;
   font-size: 1rem;
 }
 @media screen and (min-width: 768px) {
   .story-text-subscribe .input-box .form-control {
     font-size: 1.5rem;
+  }
+}
+.story-text-subscribe .info span {
+  color: #4BA87D;
+}
+
+.story-customer .brand-box > div {
+  text-align: center;
+  height: 60px;
+}
+.story-customer .brand-box > div img {
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .story-customer .brand-box > div:nth-child(2) {
+    order: -2;
+  }
+  .story-customer .brand-box > div:nth-child(2) > img {
+    width: 10%;
+    filter: brightness(2);
+  }
+  .story-customer .brand-box > div:nth-child(3) {
+    order: 1;
+  }
+  .story-customer .brand-box > div:nth-child(5) {
+    order: -1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .story-customer .brand-box > div:nth-child(2) img {
+    width: 70%;
   }
 }

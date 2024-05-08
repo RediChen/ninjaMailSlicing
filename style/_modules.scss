@@ -8,7 +8,7 @@
 
     font-size: 1rem;
 
-    @media screen and (min-width: 768px) {
+    @include rwd-above('md') {
         font-size: 1.5rem;
 
     }
@@ -18,7 +18,7 @@
     font-family: 'Raleway', sans;
     font-weight: $fw;
 
-    @if ($fz !=0) {
+    @if ($fz != 0) {
         font-size: $fz;
     }
 }
@@ -27,7 +27,7 @@
     font-family: 'Playfair Display', sans-serif;
     font-weight: $fw;
 
-    @if ($fz !=0) {
+    @if ($fz != 0) {
         font-size: $fz;
     }
 }

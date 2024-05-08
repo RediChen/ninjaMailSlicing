@@ -17,13 +17,13 @@
     .title {
         margin: 0 auto;
 
-        @include rwd-above('lg') {
-            width: 60%;
-        }
-
         h2 {
-            @include ff-plafairy(900, 2.5rem);
             text-align: center;
+            @include ff-plafairy(900, 2rem);
+
+            @include rwd-above('lg') {
+                @include ff-plafairy(900, 2.5rem);
+            }
         }
     }
 }
@@ -59,6 +59,10 @@
 
         h2 {
             @include ff-raleway(900);
+
+            @include rwd-above('lg') {
+                width: 60%;
+            }
         }
 
         h4 {
@@ -80,17 +84,55 @@
 }
 
 .story-text {
-    
-
     &-subscribe {
         .input-box .form-control {
-            width: 100%;
+            // width: 100%;
+            // display: block;
             padding-block: 0.75rem;
             font-size: 1rem;
 
-            @media screen and (min-width: 768px) {
+            @include rwd-above('md') {
                 font-size: 1.5rem;
+            }
+        }
 
+        .info span {
+            color: $color-prime;
+        }
+    }
+}
+
+.story-customer {
+    .brand-box>div {
+        text-align: center;
+        height: 60px;
+
+        img {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 576px) {
+            &:nth-child(2) {
+                order: -2;
+
+                >img {
+                    width: 10%;
+                    filter:brightness(2)
+                }
+            }
+
+            &:nth-child(3) {
+                order: 1;
+            }
+
+            &:nth-child(5) {
+                order: -1;
+            }
+        }
+
+        @include rwd-above('md') {
+            &:nth-child(2) img {
+                width: 70%;
             }
         }
     }
