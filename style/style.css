@@ -273,8 +273,35 @@ main article {
   padding-right: 3rem;
 }
 
+/* 架構
+-article.stories
+    └-.story-case
+        └-(.div > h2 + h4)*3
+    └-.story-text
+        └-.title > h2
+        └-.story-text-subscribe
+            └-.input-box > input + (.info > span)
+            └-.btn-box > button
+    └-.story-customer
+        └-.title > h2
+        └-.brand-box > (brand > img)*5
+*/
 .stories {
   margin-top: 10rem;
+}
+.stories .title {
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .stories .title {
+    width: 60%;
+  }
+}
+.stories .title h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .story-case {
@@ -294,7 +321,7 @@ main article {
   height: 157px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .story-case > div * {
   margin: 0;
@@ -320,4 +347,15 @@ main article {
 }
 .story-case > div:nth-child(3) {
   background: center/cover url("../images/artilce5.png");
+}
+
+.story-text-subscribe .input-box .form-control {
+  width: 100%;
+  padding-block: 0.75rem;
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .story-text-subscribe .input-box .form-control {
+    font-size: 1.5rem;
+  }
 }
