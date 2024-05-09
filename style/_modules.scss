@@ -4,8 +4,6 @@
     font-family: Raleway;
     font-weight: 900;
     letter-spacing: 2.1px;
-    border: 3px solid $color-prime;
-
     font-size: 1rem;
 
     @include rwd-above('md') {
@@ -43,13 +41,13 @@
     align-items: center;
 }
 
-.btn-fill {
+.btn-green {
     @include nj-btn;
     background-color: $color-prime;
     color: white;
 }
 
-.btn-frame {
+.btn-white {
     @include nj-btn;
     background-color: white;
     color: $color-prime;

@@ -114,6 +114,7 @@ background: url(../images/bg1.png) 0 0 / 100% auto no-repeat, white;
     button {
         // padding: 0;
         width: 140px;
+        border: 3px solid $color-prime;
 
         @include rwd-above('sm') {
             width: 13rem;

@@ -23,34 +23,32 @@ a:link, a:visited {
   align-items: center;
 }
 
-.btn-fill {
+.btn-green {
   padding-block: 0.75rem;
   font-family: Raleway;
   font-weight: 900;
   letter-spacing: 2.1px;
-  border: 3px solid #4BA87D;
   font-size: 1rem;
   background-color: #4BA87D;
   color: white;
 }
 @media screen and (min-width: 768px) {
-  .btn-fill {
+  .btn-green {
     font-size: 1.5rem;
   }
 }
 
-.btn-frame {
+.btn-white {
   padding-block: 0.75rem;
   font-family: Raleway;
   font-weight: 900;
   letter-spacing: 2.1px;
-  border: 3px solid #4BA87D;
   font-size: 1rem;
   background-color: white;
   color: #4BA87D;
 }
 @media screen and (min-width: 768px) {
-  .btn-frame {
+  .btn-white {
     font-size: 1.5rem;
   }
 }
@@ -194,6 +192,7 @@ a:link, a:visited {
 }
 .hero-ctn-membrane button {
   width: 140px;
+  border: 3px solid #4BA87D;
 }
 @media screen and (min-width: 576px) {
   .hero-ctn-membrane button {
