@@ -1,0 +1,9 @@
+.get-today {
+    background-color: $color-prime;
+    text-align: center;
+
+    h2 {
+        @include ff-plafairy(900);
+        color: $white;
+    }
+}

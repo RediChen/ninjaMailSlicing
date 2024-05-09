@@ -395,3 +395,13 @@ main article {
     width: 70%;
   }
 }
+
+.get-today {
+  background-color: #4BA87D;
+  text-align: center;
+}
+.get-today h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
