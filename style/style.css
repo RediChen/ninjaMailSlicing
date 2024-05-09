@@ -404,4 +404,15 @@ main article {
   font-family: "Playfair Display", sans-serif;
   font-weight: 900;
   color: #fff;
+  font-size: 3.5rem;
+}
+@media screen and (min-width: 768px) {
+  .get-today h2 {
+    font-size: 2.625rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .get-today h2 {
+    font-size: 3.75rem;
+  }
 }

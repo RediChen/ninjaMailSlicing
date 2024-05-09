@@ -5,5 +5,13 @@
     h2 {
         @include ff-plafairy(900);
         color: $white;
+        font-size: 3.5rem;
+
+        @include rwd-above('md') {
+            font-size: 2.625rem;
+        }
+        @include rwd-above('lg') {
+            font-size: 3.75rem;
+        }
     }
 }
