@@ -1,16 +1,10 @@
 //===== mixins =====
 @mixin nj-btn {
     padding-block: 0.75rem;
-    font-family: Raleway;
-    font-weight: 900;
+    @include ff-raleway(900);
     letter-spacing: 2.1px;
-    font-size: 1rem;
+    text-align: center;
     border: none;
-
-    @include rwd-above('md') {
-        font-size: 1.5rem;
-
-    }
 }
 
 //字型大小以是否為 PC 為分界
