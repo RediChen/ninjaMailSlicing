@@ -18,12 +18,22 @@
 
 .top-logo {
     img {
-        height: 64px;
+        height: 52px;
+        @include rwd-above('lg') {
+            height: 64px;
+        }
     }
 
     h1 {
         margin-left: -1rem;
         @include ff-raleway(900);
+        font-size: into-rem(22);
+        @include rwd-above('md') {
+            font-size: into-rem(22, true);
+        }
+        @include rwd-above('lg') {
+            font-size: into-rem(35, true);
+        }
     }
 }
 

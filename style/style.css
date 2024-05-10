@@ -70,12 +70,28 @@ a:link, a:visited {
 }
 
 .top-logo img {
-  height: 64px;
+  height: 52px;
+}
+@media screen and (min-width: 992px) {
+  .top-logo img {
+    height: 64px;
+  }
 }
 .top-logo h1 {
   margin-left: -1rem;
   font-family: "Raleway", sans;
   font-weight: 900;
+  font-size: "2.2rem";
+}
+@media screen and (min-width: 768px) {
+  .top-logo h1 {
+    font-size: "1.375rem";
+  }
+}
+@media screen and (min-width: 992px) {
+  .top-logo h1 {
+    font-size: "2.1875rem";
+  }
 }
 
 .top-btn-wrap {
@@ -232,7 +248,6 @@ main article {
 }
 
 .features {
-  height: 450px;
   justify-content: space-evenly;
   align-items: end;
 }

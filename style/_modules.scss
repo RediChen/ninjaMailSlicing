@@ -30,6 +30,16 @@
     }
 }
 
+//===== functions =====
+
+@function into-rem($fz-px, $isPC: false) {
+    @if ($isPC) {
+        @return calc($fz-px / 16) + 'rem';
+    } @else {
+        @return calc($fz-px / 10) + 'rem';
+    }
+}
+
 //module class
 .object-fit-cover {
     width: 100%;
