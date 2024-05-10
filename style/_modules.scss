@@ -5,6 +5,7 @@
     font-weight: 900;
     letter-spacing: 2.1px;
     font-size: 1rem;
+    border: none;
 
     @include rwd-above('md') {
         font-size: 1.5rem;
@@ -16,7 +17,7 @@
     font-family: 'Raleway', sans;
     font-weight: $fw;
 
-    @if ($fz != 0) {
+    @if ($fz !=0) {
         font-size: $fz;
     }
 }
@@ -25,7 +26,7 @@
     font-family: 'Playfair Display', sans-serif;
     font-weight: $fw;
 
-    @if ($fz != 0) {
+    @if ($fz !=0) {
         font-size: $fz;
     }
 }
@@ -34,9 +35,11 @@
 
 @function into-rem($fz-px, $isPC: false) {
     @if ($isPC) {
-        @return calc($fz-px / 16) + 'rem';
-    } @else {
-        @return calc($fz-px / 10) + 'rem';
+        @return calc($fz-px / 16)+'rem';
+    }
+
+    @else {
+        @return calc($fz-px / 10)+'rem';
     }
 }
 
@@ -54,11 +57,21 @@
 .btn-green {
     @include nj-btn;
     background-color: $color-prime;
-    color: white;
+
+    &,
+    &:link,
+    &:visited {
+        color: white;
+    }
 }
 
 .btn-white {
     @include nj-btn;
     background-color: white;
-    color: $color-prime;
+
+    &,
+    &:link,
+    &:visited {
+        color: $color-prime;
+    }
 }

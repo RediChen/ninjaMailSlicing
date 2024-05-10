@@ -11,6 +11,7 @@ html {
 
 a:link, a:visited {
   text-decoration: none;
+  color: #000;
 }
 
 .object-fit-cover {
@@ -29,13 +30,16 @@ a:link, a:visited {
   font-weight: 900;
   letter-spacing: 2.1px;
   font-size: 1rem;
+  border: none;
   background-color: #4BA87D;
-  color: white;
 }
 @media screen and (min-width: 768px) {
   .btn-green {
     font-size: 1.5rem;
   }
+}
+.btn-green, .btn-green:link, .btn-green:visited {
+  color: white;
 }
 
 .btn-white {
@@ -44,13 +48,16 @@ a:link, a:visited {
   font-weight: 900;
   letter-spacing: 2.1px;
   font-size: 1rem;
+  border: none;
   background-color: white;
-  color: #4BA87D;
 }
 @media screen and (min-width: 768px) {
   .btn-white {
     font-size: 1.5rem;
   }
+}
+.btn-white, .btn-white:link, .btn-white:visited {
+  color: #4BA87D;
 }
 
 /* 架構
@@ -217,7 +224,6 @@ a:link, a:visited {
 }
 
 main {
-  height: 300vh;
   padding-top: 1px;
   background: 0 0/100% auto no-repeat url("../images/bg.png");
 }
@@ -430,4 +436,38 @@ main article {
   .get-today h2 {
     font-size: 3.75rem;
   }
+}
+
+footer .logo img {
+  height: 30px;
+}
+@media screen and (min-width: 992px) {
+  footer .logo img {
+    height: 45px;
+  }
+}
+footer .logo h2 {
+  margin-left: -1rem;
+  font-family: "Raleway", sans;
+  font-weight: 900;
+  font-size: "1.6rem";
+}
+@media screen and (min-width: 768px) {
+  footer .logo h2 {
+    font-size: "1rem";
+  }
+}
+@media screen and (min-width: 992px) {
+  footer .logo h2 {
+    font-size: "1.625rem";
+  }
+}
+footer li > a {
+  color: #000;
+  font-family: "Raleway", sans;
+  font-weight: 700;
+}
+footer .copyright {
+  font-family: "Raleway", sans;
+  font-weight: 700;
 }

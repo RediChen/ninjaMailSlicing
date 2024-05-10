@@ -1,0 +1,37 @@
+footer {
+    .logo {
+        img {
+            height: 30px;
+
+            @include rwd-above('lg') {
+                height: 45px;
+            }
+        }
+
+        h2 {
+            margin-left: -1rem;
+            @include ff-raleway(900);
+            font-size: into-rem(16);
+
+            @include rwd-above('md') {
+                font-size: into-rem(16, true);
+            }
+
+            @include rwd-above('lg') {
+                font-size: into-rem(26, true);
+            }
+        }
+    }
+
+    // .ul {
+    //     height: fit-content;
+    // }
+    li>a {
+        color: $black;
+        @include ff-raleway(700);
+    }
+    .copyright {
+        @include ff-raleway(700);
+
+    }
+}

@@ -72,7 +72,9 @@
 					<h2 class="display-4 mb-5">Reach More Customers</h2>
 					<button class="reach-more-btn btn-white">LEARN HOW</button>
 				</article>
-				<article class="features col-12 col-xs-8 col-md-7 col-lg-12 d-flex flex-column flex-lg-row mx-auto">
+				<article
+					class="features col-12 col-xs-8 col-md-7 col-lg-12 d-flex flex-column flex-lg-row mx-auto"
+				>
 					<div class="card shadow">
 						<div class="card-img">
 							<img
@@ -210,25 +212,25 @@
 		</main>
 		<footer>
 			<div class="container">
-				<section>
-					<div class="logo hstack">
+				<section
+					class="row justify-content-evenly py-5 border-bottom border-2"
+				>
+					<div class="logo hstack col-12 col-md-auto">
 						<img
-						src="./images/logo-mail_1200x600.png"
-						alt="Ninja Mail"
-					/>
-					<h1>NinjaMail</h1>
+							src="./images/logo-mail_1200x600.png"
+							alt="Ninja Mail"
+						/>
+						<h2>NinjaMail</h2>
 					</div>
-					<ul class="list-unstyled">
-						<li>
-							<ul class="list-unstyled">
+					<div class="row col-md-6 align-items-start">
+						<div class="row col-6">
+							<ul class="list-unstyled col-12 col-md-6 m-0">
 								<li><a href="#">features</a></li>
 								<li><a href="#">Pricing</a></li>
 								<li><a href="#">Services</a></li>
 								<li><a href="#">Partners</a></li>
 							</ul>
-						</li>
-						<li>
-							<ul class="list-unstyled">
+							<ul class="list-unstyled col-12 col-md-6">
 								<li><a href="#">About</a></li>
 								<li><a href="#">Tutorials</a></li>
 								<li><a href="#">Resources</a></li>
@@ -236,28 +238,34 @@
 								<li><a href="#">Templates</a></li>
 								<li><a href="#">Case Studies</a></li>
 							</ul>
-						</li>
-						<li>
-							<ul class="list-unstyled">
+						</div>
+						<div class="row col-6">
+							<ul class="list-unstyled col-12 col-md-6 m-0">
 								<li><a href="#">Medium</a></li>
 								<li><a href="#">Twitter</a></li>
 								<li><a href="#">Facebook</a></li>
 								<li><a href="#">Instagram</a></li>
 								<li><a href="#">LinkedIn</a></li>
 							</ul>
-						</li>
-						<li>
-							<ul class="list-unstyled">
+							<ul class="list-unstyled col-12 col-md-6 m-0">
 								<li><a href="#">Contact Us</a></li>
 								<li><a href="#">Slack</a></li>
 								<li><a href="#">Jobs</a></li>
 							</ul>
-						</li>
-					</ul>
+						</div>
+					</div>
 				</section>
-				<div class="copyright hstack justify-content-evenly">
-					<p>NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All rights reserved.</p>
-					<a href="#">Terms & Conditions</a><a href="#">Privacy Policy</a>
+				<div
+					class="copyright py-5 d-flex flex-column flex-md-row justify-content-evenly"
+				>
+					<p class="m-0">
+						NinjaMail is a sample project for Quest AI.<br class="d-md-none" /> © 2019 Quest
+						AI, All rights reserved.
+					</p>
+					<div class="d-flex flex-column flex-md-row mt-3 mt-md-0">
+						<a href="#">Terms & Conditions</a>
+						<a href="#" class="mt-2 mt-md-0 ms-md-5">Privacy Policy</a>
+					</div>
 				</div>
 			</div>
 		</footer>
