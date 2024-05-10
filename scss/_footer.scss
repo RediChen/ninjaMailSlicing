@@ -10,16 +10,7 @@ footer {
 
         h2 {
             margin-left: -1rem;
-            @include ff-raleway(900);
-            font-size: into-rem(16);
-
-            @include rwd-above('md') {
-                font-size: into-rem(16, true);
-            }
-
-            @include rwd-above('lg') {
-                font-size: into-rem(26, true);
-            }
+            @include ff-raleway(900, 16px, 26px);
         }
     }
 
@@ -32,6 +23,5 @@ footer {
     }
     .copyright {
         @include ff-raleway(700);
-
     }
 }

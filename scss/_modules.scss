@@ -13,33 +13,34 @@
     }
 }
 
-@mixin ff-raleway($fw, $fz: 0) {
+//字型大小以是否為 PC 為分界
+@mixin ff-raleway($fw, $fz: 0, $fz-lg: 0) {
     font-family: 'Raleway', sans;
     font-weight: $fw;
 
     @if ($fz !=0) {
         font-size: $fz;
     }
+
+    @if ($fz-lg !=0) {
+        @include rwd-above('lg') {
+            font-size: $fz-lg;
+        }
+    }
 }
 
-@mixin ff-plafairy($fw, $fz: 0) {
+@mixin ff-plafairy($fw, $fz: 0, $fz-lg: 0) {
     font-family: 'Playfair Display', sans-serif;
     font-weight: $fw;
 
     @if ($fz !=0) {
         font-size: $fz;
     }
-}
 
-//===== functions =====
-
-@function into-rem($fz-px, $isPC: false) {
-    @if ($isPC) {
-        @return calc($fz-px / 16)+'rem';
-    }
-
-    @else {
-        @return calc($fz-px / 10)+'rem';
+    @if ($fz-lg !=0) {
+        @include rwd-above('lg') {
+            font-size: $fz-lg;
+        }
     }
 }
 
