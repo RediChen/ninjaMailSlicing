@@ -1,38 +1,33 @@
 //=== RWD breakpoint param 斷點尺寸清單
-// p.s. 因為 sass 不支援 map 的斷行寫法，因此此檔採用 scss。
-// Reference: Boostrap
+// 採用 Boostrap 的設定數值
 $breakpoints: (
-    //name 區間名稱: minimum width 區間的下界
-    //============ ┌→ mobile
-    xxs: 0,
-    xs: 380px,
-    sm: 576px,
-    //==  tablet ←┐└→ mobile
-    md: 768px,
-    //==  tablet ←┘┌→ desktop
-    lg: 992px,
-    xl: 1280px,
-    xxl: 1536px
-    //============ └→ desktop
+	//name 寬度界線名: minimum width 寬度界線數值
+	//============ ┌→ mobile
+	xs: 380px,
+	sm: 576px,
+	//==  tablet ←┐└→ mobile
+	md: 768px,
+	//==  tablet ←┘┌→ desktop
+	lg: 992px,
+	xl: 1280px,
+	xxl: 1536px //============ └→ desktop
 ) !default;
-//* 將尺寸名稱轉換成 px
+
+//* 函數功能：將尺寸名稱轉換成 px
+/*回傳區間的下界 size (px)
+//若找無對應下界，則會有錯誤訊息 */
 @function lower-bound($size-name) {
-    //回傳區間的下界 size (px)
-    //若無下界，則回傳 null
-    $min: map-get($breakpoints, $size-name);
-    @if not $min {
-        @error "此 rwd 系統的尺寸中沒有 " + $size-name + "。";
-    }
-    @return if($min != 0, $min, null);
+	$min: map-get($breakpoints, $size-name);
+	@if not $min {
+		@error "此 rwd 系統的尺寸中沒有 " + $size-name + "。";
+	}
+	@return $min;
 }
-// 使用 media queries
+
+//* API
+// 提供 media queries 的簡寫版本
 @mixin rwd-above($name) {
-    $bound: lower-bound($name);
-    @if $bound {
-        @media screen and (min-width: $bound) {
-            @content;
-        }
-    } @else {
-        @content;
-    }
+	@media screen and (min-width: lower-bound($name)) {
+		@content;
+	}
 }
