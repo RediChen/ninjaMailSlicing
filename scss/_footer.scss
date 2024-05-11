@@ -19,9 +19,9 @@ footer {
     // }
     li>a {
         color: $black;
-        @include ff-raleway(700);
+        @include ff-raleway(700, 12px, 19px);
     }
     .copyright {
-        @include ff-raleway(700);
+        @include ff-raleway(700, 9px, 15px);
     }
 }

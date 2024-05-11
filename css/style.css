@@ -239,7 +239,17 @@ a:link, a:visited {
 .hero .content-membrane p {
   font-family: "Raleway", sans;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 14px;
+}
+@media screen and (min-width: 576px) {
+  .hero .content-membrane p {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero .content-membrane p {
+    font-size: 19px;
+  }
 }
 .hero .content-membrane button {
   width: 140px;
@@ -296,7 +306,18 @@ main article {
 .reach-more h2 {
   font-family: "Playfair Display", sans-serif;
   font-weight: 900;
+  font-size: 22px;
   color: #f2f2f2;
+}
+@media screen and (min-width: 576px) {
+  .reach-more h2 {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .reach-more h2 {
+    font-size: 60px;
+  }
 }
 .reach-more-btn {
   padding: 1rem 2rem;
@@ -321,10 +342,22 @@ main article {
 .features .card p {
   font-family: "Raleway", sans;
   font-weight: 500;
+  font-size: 12px;
+}
+@media screen and (min-width: 992px) {
+  .features .card p {
+    font-size: 16px;
+  }
 }
 .features .card a {
   font-family: "Raleway", sans;
   font-weight: 800;
+  font-size: 12px;
+}
+@media screen and (min-width: 992px) {
+  .features .card a {
+    font-size: 16px;
+  }
 }
 .features .card a:link, .features .card a:visited {
   color: #4BA87D;
@@ -335,12 +368,23 @@ main article {
 .features .info h2 {
   font-family: "Playfair Display", sans-serif;
   font-weight: 900;
+  font-size: 44px;
+}
+@media screen and (min-width: 992px) {
+  .features .info h2 {
+    font-size: 28px;
+  }
 }
 .features .info p {
   font-family: "Raleway", sans;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 12px;
   padding-right: 3rem;
+}
+@media screen and (min-width: 992px) {
+  .features .info p {
+    font-size: 19px;
+  }
 }
 
 /* 架構
@@ -356,23 +400,19 @@ main article {
         └-.title > h2
         └-.brand-box > (brand > img)*5
 */
-.stories {
-  margin-top: 10rem;
-}
-.stories .title {
-  margin: 0 auto;
-}
 .stories .title h2 {
-  text-align: center;
   font-family: "Playfair Display", sans-serif;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 26px;
+}
+@media screen and (min-width: 576px) {
+  .stories .title h2 {
+    font-size: 28px;
+  }
 }
 @media screen and (min-width: 992px) {
   .stories .title h2 {
-    font-family: "Playfair Display", sans-serif;
-    font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 44px;
   }
 }
 
@@ -406,6 +446,12 @@ main article {
 .story-case > div h2 {
   font-family: "Raleway", sans;
   font-weight: 900;
+  font-size: 22px;
+}
+@media screen and (min-width: 992px) {
+  .story-case > div h2 {
+    font-size: 34px;
+  }
 }
 @media screen and (min-width: 992px) {
   .story-case > div h2 {
@@ -415,6 +461,12 @@ main article {
 .story-case > div h4 {
   font-family: "Raleway", sans;
   font-weight: 700;
+  font-size: 12px;
+}
+@media screen and (min-width: 992px) {
+  .story-case > div h4 {
+    font-size: 19px;
+  }
 }
 .story-case > div:nth-child(1) {
   background: center/cover url("../images/artilce3.png");
@@ -428,15 +480,23 @@ main article {
 
 .story-text-subscribe .input-box .form-control {
   padding-block: 0.75rem;
-  font-size: 1rem;
+  font-size: 13px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .story-text-subscribe .input-box .form-control {
-    font-size: 1.5rem;
+    font-size: 21px;
   }
 }
 .story-text-subscribe .info span {
   color: #4BA87D;
+  font-family: "Raleway", sans;
+  font-weight: 400;
+  font-size: 12px;
+}
+@media screen and (min-width: 992px) {
+  .story-text-subscribe .info span {
+    font-size: 21px;
+  }
 }
 
 .story-customer .brand-box > div {
@@ -474,17 +534,20 @@ main article {
 .get-today h2 {
   font-family: "Playfair Display", sans-serif;
   font-weight: 900;
+  font-size: 42px;
   color: #f2f2f2;
-  font-size: 3.5rem;
-}
-@media screen and (min-width: 768px) {
-  .get-today h2 {
-    font-size: 2.625rem;
-  }
 }
 @media screen and (min-width: 992px) {
   .get-today h2 {
-    font-size: 3.75rem;
+    font-size: 60px;
+  }
+}
+.get-today button {
+  font-size: 13px;
+}
+@media screen and (min-width: 992px) {
+  .get-today button {
+    font-size: 21px;
   }
 }
 
@@ -511,8 +574,20 @@ footer li > a {
   color: #000;
   font-family: "Raleway", sans;
   font-weight: 700;
+  font-size: 12px;
+}
+@media screen and (min-width: 992px) {
+  footer li > a {
+    font-size: 19px;
+  }
 }
 footer .copyright {
   font-family: "Raleway", sans;
   font-weight: 700;
+  font-size: 9px;
+}
+@media screen and (min-width: 992px) {
+  footer .copyright {
+    font-size: 15px;
+  }
 }

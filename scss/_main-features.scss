@@ -13,11 +13,11 @@
         }
 
         p {
-            @include ff-raleway(500);
+            @include ff-raleway(500, 12px, 16px);
         }
 
         a {
-            @include ff-raleway(800);
+            @include ff-raleway(800, 12px, 16px);
 
             &:link,
             &:visited {
@@ -28,10 +28,10 @@
     .info {
         width: 25rem;
         h2 {
-            @include ff-plafairy(900);
+            @include ff-plafairy(900, 44px, 28px);
         }
         p {
-            @include ff-raleway(400, 1.25rem);
+            @include ff-raleway(400, 12px, 19px);
             padding-right: 3rem;
         }
     }

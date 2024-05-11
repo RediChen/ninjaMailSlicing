@@ -10,7 +10,7 @@
 	}
 
 	h2 {
-		@include ff-plafairy(900);
+		@include ff-plafairy(900, 22px, 38px, 60px);
 		color: $white;
 	}
 

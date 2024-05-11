@@ -100,7 +100,7 @@ $img-w: (
 	// max-width: 33rem;
 
 	p {
-		@include ff-raleway(500, 1.25rem);
+		@include ff-raleway(500, 14px, 12px, 19px);
 	}
 
 	button {

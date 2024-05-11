@@ -12,128 +12,115 @@
         └-.brand-box > (brand > img)*5
 */
 .stories {
-    margin-top: 10rem;
-
-    .title {
-        margin: 0 auto;
-
-        h2 {
-            text-align: center;
-            @include ff-plafairy(900, 2rem);
-
-            @include rwd-above('lg') {
-                @include ff-plafairy(900, 2.5rem);
-            }
-        }
-    }
+	// 此 class 有兩處使用到
+	.title h2 {
+		@include ff-plafairy(900, 26px, 28px, 44px);
+	}
 }
 
 .story-case {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-    @include rwd-above('md') {
-        flex-direction: row;
-    }
+	@include rwd-above("md") {
+		flex-direction: row;
+	}
 
-    justify-content: space-evenly;
-    gap: 2rem;
+	justify-content: space-evenly;
+	gap: 2rem;
 
-    >div {
-        padding: 1rem;
+	> div {
+		padding: 1rem;
 
-        * {
-            margin: 0;
-        }
+		* {
+			margin: 0;
+		}
 
-        width: 100%;
-        height: 157px;
+		width: 100%;
+		height: 157px;
 
-        @include rwd-above('lg') {
-            height: 239px;
-        }
+		@include rwd-above("lg") {
+			height: 239px;
+		}
 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 
-        h2 {
-            @include ff-raleway(900);
+		h2 {
+			@include ff-raleway(900, 22px, 34px);
 
-            @include rwd-above('lg') {
-                width: 60%;
-            }
-        }
+			@include rwd-above("lg") {
+				width: 60%;
+			}
+		}
 
-        h4 {
-            @include ff-raleway(700);
-        }
+		h4 {
+			@include ff-raleway(700, 12px, 19px);
+		}
 
-        &:nth-child(1) {
-            background: center / cover url('../images/artilce3.png');
-        }
+		&:nth-child(1) {
+			background: center / cover url("../images/artilce3.png");
+		}
 
-        &:nth-child(2) {
-            background: center / cover url('../images/artilce4.png');
-        }
+		&:nth-child(2) {
+			background: center / cover url("../images/artilce4.png");
+		}
 
-        &:nth-child(3) {
-            background: center / cover url('../images/artilce5.png');
-        }
-    }
+		&:nth-child(3) {
+			background: center / cover url("../images/artilce5.png");
+		}
+	}
 }
 
 .story-text {
-    &-subscribe {
-        .input-box .form-control {
-            // width: 100%;
-            // display: block;
-            padding-block: 0.75rem;
-            font-size: 1rem;
+	&-subscribe {
+		.input-box .form-control {
+			// width: 100%;
+			// display: block;
+			padding-block: 0.75rem;
+			@include font-size(13px, 21px);
+		}
 
-            @include rwd-above('md') {
-                font-size: 1.5rem;
-            }
-        }
-
-        .info span {
-            color: $color-prime;
-        }
-    }
+		.info span {
+			color: $color-prime;
+			@include ff-raleway(400, 12px, 21px);
+		}
+	}
 }
 
 .story-customer {
-    .brand-box>div {
-        text-align: center;
-        height: 60px;
+	.brand-box > div {
+		text-align: center;
+		height: 60px;
 
-        img {
-            width: 100%;
-        }
+		img {
+			width: 100%;
+		}
 
-        @media screen and (max-width: 576px) {
-            &:nth-child(2) {
-                order: -2;
+		@media screen and (max-width: 576px) {
+			&:nth-child(2) {
+				order: -2;
 
-                >img {
-                    width: 10%;
-                    filter:brightness(2)
-                }
-            }
+				> img {
+					width: 10%;
+					filter: brightness(2);
+				}
+			}
 
-            &:nth-child(3) {
-                order: 1;
-            }
+			&:nth-child(3) {
+				order: 1;
+			}
 
-            &:nth-child(5) {
-                order: -1;
-            }
-        }
+			&:nth-child(5) {
+				order: -1;
+			}
+		}
 
-        @include rwd-above('md') {
-            &:nth-child(2) img {
-                width: 70%;
-            }
-        }
-    }
+		@include rwd-above("md") {
+			&:nth-child(2) img {
+				width: 70%;
+			}
+		}
+	}
 }

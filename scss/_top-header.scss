@@ -41,11 +41,7 @@
 
     >.btn-green {
         padding-inline: 0.5rem;
-        font-size: 11px;
-
-        @include rwd-above('lg') {
-            font-size: 17px;
-        }
+        @include font-size(11px, 17px);
     }
 }
 
