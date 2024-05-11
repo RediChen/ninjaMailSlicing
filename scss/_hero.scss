@@ -2,9 +2,11 @@
 -.hero
     └-.container
         └-.hero-wrap
-            └-h1.hero-title
-            └-.hero-ctn > p + div > btn*2
-            └-.hero-img
+            └-.title > h1
+            └-.content > .content-membrane
+				└- p
+				└- div > btn*2
+            └-.hero-img > img
 */
 // 變數區
 $img-offset: calc(2rem + 5vw);
@@ -17,42 +19,45 @@ $img-w: (
 // 變數區 END
 .hero {
 	margin-top: $top-header-h;
-	min-height: calc(100vh - #{$top-header-h});
 	background-color: $white;
 
 	@include rwd-above("md") {
-		background: url(../images/bg1.png) 0 0 / 108% auto no-repeat, white;
+		padding-block: 10vh;
+		background: url(../images/bg1.png) 0 0 / 108% auto no-repeat, $white;
+	}
+	@include rwd-above("lg") {
+		padding-block: 0;
+		min-height: calc(100vh - #{$top-header-h});
 	}
 }
 
 .hero-wrap {
-	box-shadow: inset 0 0 10px red;
+	box-shadow: 0 0 10px 5px red;
 	//todo remove
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
 	@include rwd-above("sm") {
-		$l-width: 9rem;
+		$l-width: auto;
 		$r-width: calc(#{map-get($img-w, "tablet")} - #{$img-offset});
 		display: grid;
-		// grid-template-columns: $l-width $r-width;
-		grid-template-columns: 2fr 1fr;
-		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: $l-width $r-width;
+		// grid-template-columns: 2fr 1fr;
+		grid-template-rows: auto auto;
 	}
 
 	@include rwd-above("lg") {
-		$l-width: auto;
+		$l-width: 489px;
 		$r-width: calc(#{map-get($img-w, "desktop")} - #{$img-offset});
+		grid-template-columns: $l-width $r-width;
 	}
 }
 
-.hero-title {
+.hero .title {
 	border: 3px solid purple;
 	//todo remove
 	// max-width: calc(#{map-get($img-w, 'mobile')} + 3vw);
-	width: map-get($img-w, "mobile");
-	// @error "是" + map-get($img-w, 'mobile');
 	z-index: 1;
 
 	@include rwd-above("sm") {
@@ -69,10 +74,11 @@ $img-w: (
 		}
 	}
 }
+//ref: display-3
+//  font-size:4rem (min-width:1200px)
+//  font-size:calc(1.525rem + 3.3vw)
 
-.hero-ctn {
-	width: map-get($img-w, "mobile");
-
+.hero .content {
 	border: 3px solid green;
 	//todo remove
 	z-index: 1;
@@ -85,28 +91,7 @@ $img-w: (
 	}
 }
 
-.hero-img {
-	border: 3px solid navy;
-	//todo remove
-	margin-left: 0;
-	// aspect-ratio: 16 / 9;
-	margin-top: calc(0px - 8rem);
-	align-self: center;
-	width: map-get($img-w, "mobile");
-
-	@include rwd-above("sm") {
-		margin-left: calc(0px - 2rem - 5vw);
-		grid-column: 2;
-		grid-row: 1 / 3;
-		width: map-get($img-w, "tablet");
-	}
-
-	@include rwd-above("lg") {
-		width: map-get($img-w, "desktop");
-	}
-}
-
-.hero-ctn-membrane {
+.hero .content-membrane {
 	border: 3px solid gold;
 	//todo remove
 	// width: calc(15rem + 45vw);
@@ -129,6 +114,23 @@ $img-w: (
 	}
 }
 
-//ref: display-3
-//  font-size:4rem (min-width:1200px)
-//  font-size:calc(1.525rem + 3.3vw)
+.hero-img {
+	border: 3px solid navy;
+	//todo remove
+	aspect-ratio: 16 / 9;
+	margin-top: calc(0px - 8rem);	
+	align-self: center;
+	width: map-get($img-w, "mobile");
+
+	@include rwd-above("sm") {
+		margin-top: 0;
+		margin-left: calc(0px - #{$img-offset});
+		grid-column: 2;
+		grid-row: 1 / 3;
+		width: map-get($img-w, "tablet");
+	}
+
+	@include rwd-above("lg") {
+		width: map-get($img-w, "desktop");
+	}
+}
