@@ -551,37 +551,16 @@ main article {
   }
 }
 
-footer .logo img {
-  height: 30px;
+footer section, footer .copyright {
+  max-width: 380px;
 }
-@media screen and (min-width: 992px) {
-  footer .logo img {
-    height: 45px;
-  }
-}
-footer .logo h2 {
-  margin-left: -1rem;
-  font-family: "Raleway", sans;
-  font-weight: 900;
-  font-size: 16px;
-}
-@media screen and (min-width: 992px) {
-  footer .logo h2 {
-    font-size: 26px;
-  }
-}
-footer li > a {
-  color: #000;
-  font-family: "Raleway", sans;
-  font-weight: 700;
-  font-size: 12px;
-}
-@media screen and (min-width: 992px) {
-  footer li > a {
-    font-size: 19px;
+@media screen and (min-width: 768px) {
+  footer section, footer .copyright {
+    max-width: initial;
   }
 }
 footer .copyright {
+  width: 100%;
   font-family: "Raleway", sans;
   font-weight: 700;
   font-size: 9px;
@@ -589,5 +568,47 @@ footer .copyright {
 @media screen and (min-width: 992px) {
   footer .copyright {
     font-size: 15px;
+  }
+}
+
+footer section .logo {
+  margin-left: -2rem;
+}
+@media screen and (min-width: 768px) {
+  footer section .logo {
+    margin-left: 0;
+  }
+}
+footer section .logo img {
+  height: 30px;
+}
+@media screen and (min-width: 992px) {
+  footer section .logo img {
+    height: 45px;
+  }
+}
+footer section .logo h2 {
+  margin: -5px 0 0 -10px;
+  font-family: "Raleway", sans;
+  font-weight: 900;
+  font-size: 16px;
+}
+@media screen and (min-width: 992px) {
+  footer section .logo h2 {
+    font-size: 26px;
+  }
+}
+footer section ul {
+  padding: 0;
+}
+footer section li > a {
+  color: #000;
+  font-family: "Raleway", sans;
+  font-weight: 700;
+  font-size: 12px;
+}
+@media screen and (min-width: 992px) {
+  footer section li > a {
+    font-size: 19px;
   }
 }
