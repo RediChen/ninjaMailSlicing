@@ -1,0 +1,9 @@
+main {
+    padding-top: 1px;
+    //為了避免第一個子元素的 margin-top 變成此元素的外距
+    background: 0 0 / 100% auto no-repeat url("../images/bg.png");
+
+    article {
+        margin-top: 10rem;
+    }
+}

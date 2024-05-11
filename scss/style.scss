@@ -1,9 +1,10 @@
 @import './rwd-system';
-@import './_base.scss';
-@import './_modules.scss';
-@import './_top-header.scss';
+@import './base';
+@import './modules';
+@import './top-header';
 @import './hero';
-@import './_main-top.scss';
+@import './main';
+@import './main-reach';
 @import './main-features';
 @import './stories';
 @import './get-today';

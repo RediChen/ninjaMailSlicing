@@ -59,7 +59,7 @@ a:link, a:visited {
             └-nav + a.btn-fill
 */
 .top-header {
-  background-color: #fff;
+  background-color: #f2f2f2;
   z-index: 99;
 }
 .top-header > .hstack {
@@ -145,11 +145,11 @@ a:link, a:visited {
 .hero {
   margin-top: 100px;
   min-height: calc(100vh - 100px);
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background: url(../images/bg1.png) 0 0/100% auto no-repeat, white;
+    background: url(../images/bg1.png) 0 0/108% auto no-repeat, white;
   }
 }
 
@@ -270,7 +270,7 @@ main article {
 .reach-more h2 {
   font-family: "Playfair Display", sans-serif;
   font-weight: 900;
-  color: #fff;
+  color: #f2f2f2;
 }
 .reach-more-btn {
   padding: 1rem 2rem;
@@ -448,7 +448,7 @@ main article {
 .get-today h2 {
   font-family: "Playfair Display", sans-serif;
   font-weight: 900;
-  color: #fff;
+  color: #f2f2f2;
   font-size: 3.5rem;
 }
 @media screen and (min-width: 768px) {

@@ -21,7 +21,7 @@ $img-w: (
 	background-color: $white;
 
 	@include rwd-above("md") {
-		background: url(../images/bg1.png) 0 0 / 100% auto no-repeat, white;
+		background: url(../images/bg1.png) 0 0 / 108% auto no-repeat, white;
 	}
 }
 
