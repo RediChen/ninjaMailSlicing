@@ -16,6 +16,12 @@ a:link, a:visited {
   color: #000;
 }
 
+/* 大小設定語法如下：
+至少要輸入 1 個參數 -> 第一個參數為字重： 100, 200, 300, ..., 900
+輸入 2 個參數 -> font-size 為 $fz
+輸入 3 個參數 -> font-size 為 $fz，lg 以上為 $fz-sm
+輸入 4 個參數 -> font-size 為 $fz，sm 以上為 $fz-sm，lg 以上為 $fz-lg
+*/
 .object-fit-cover {
   width: 100%;
 }
@@ -195,8 +201,13 @@ a:link, a:visited {
 .hero .title h1 {
   font-family: "Playfair Display", sans-serif;
   font-weight: 900;
-  font-size: 38px;
+  font-size: 36px;
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.25), 0 1px 0 #000;
+}
+@media screen and (min-width: 576px) {
+  .hero .title h1 {
+    font-size: 38px;
+  }
 }
 @media screen and (min-width: 992px) {
   .hero .title h1 {

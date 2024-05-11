@@ -66,7 +66,7 @@ $img-w: (
 	}
 
 	h1 {
-		@include ff-plafairy(900, 38px, 59px);
+		@include ff-plafairy(900, 36px, 38px, 59px);
 
 		text-shadow: 0 3px 3px rgba($black, 0.25), 0 1px 0 $black;
 		@include rwd-above("sm") {

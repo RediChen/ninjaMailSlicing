@@ -1,72 +1,84 @@
 //===== mixins =====
 @mixin nj-btn {
-    padding-block: 0.75rem;
-    @include ff-raleway(900);
-    letter-spacing: 2.1px;
-    text-align: center;
-    border: none;
+	padding-block: 0.75rem;
+	@include ff-raleway(900);
+	letter-spacing: 2.1px;
+	text-align: center;
+	border: none;
 }
 
-//字型大小以是否為 PC 為分界
-@mixin ff-raleway($fw, $fz: 0, $fz-lg: 0) {
-    font-family: 'Raleway', sans;
-    font-weight: $fw;
+// 字型大小設定
+@mixin font-size($size1: 0, $size2: 0, $size3: 0) {
+	@if ($size1 !=0) {
+		font-size: $size1;
 
-    @if ($fz !=0) {
-        font-size: $fz;
-    }
-
-    @if ($fz-lg !=0) {
-        @include rwd-above('lg') {
-            font-size: $fz-lg;
-        }
-    }
+		@if ($size2 != 0) {
+			
+            @if ($size3 == 0) {
+				@include rwd-above("lg") {
+					font-size: $size2;
+				}
+			} @else {
+				@include rwd-above("sm") {
+					font-size: $size2;
+				}
+				@include rwd-above("lg") {
+					font-size: $size3;
+				}
+			}
+		}
+	}
 }
 
-@mixin ff-plafairy($fw, $fz: 0, $fz-lg: 0) {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: $fw;
+//設定字型、字重、大小
+/* 大小設定語法如下：
+至少要輸入 1 個參數 -> 第一個參數為字重： 100, 200, 300, ..., 900
+輸入 2 個參數 -> font-size 為 $fz
+輸入 3 個參數 -> font-size 為 $fz，lg 以上為 $fz-sm
+輸入 4 個參數 -> font-size 為 $fz，sm 以上為 $fz-sm，lg 以上為 $fz-lg
+*/
+@mixin ff-raleway($fw, $fz: 0, $fz-sm: 0, $fz-lg: 0) {
+	font-family: "Raleway", sans;
+	font-weight: $fw;
+	@include font-size($fz, $fz-sm, $fz-lg);
+}
 
-    @if ($fz !=0) {
-        font-size: $fz;
-    }
+@mixin ff-plafairy($fw, $fz: 0, $fz-sm: 0, $fz-lg: 0) {
+	font-family: "Playfair Display", sans-serif;
+	font-weight: $fw;
+	@include font-size($fz, $fz-sm, $fz-lg);
 
-    @if ($fz-lg !=0) {
-        @include rwd-above('lg') {
-            font-size: $fz-lg;
-        }
-    }
 }
 
 //module class
 .object-fit-cover {
-    width: 100%;
+	width: 100%;
 }
 
 .fx-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .btn-green {
-    @include nj-btn;
-    background-color: $color-prime;
+	@include nj-btn;
+	background-color: $color-prime;
 
-    &,
-    &:link,
-    &:visited {
-        color: white;
-    }
+	&,
+	&:link,
+	&:visited {
+		color: white;
+	}
 }
 
 .btn-white {
-    @include nj-btn;
-    background-color: white;
+	@include nj-btn;
+	background-color: white;
 
-    &,
-    &:link,
-    &:visited {
-        color: $color-prime;
-    }
+	&,
+	&:link,
+	&:visited {
+		color: $color-prime;
+	}
 }
