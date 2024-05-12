@@ -325,16 +325,49 @@ main article {
 }
 
 .features {
+  margin-inline: auto;
   justify-content: space-evenly;
-  align-items: end;
+  align-items: center;
+  width: 300px;
 }
+@media screen and (min-width: 768px) {
+  .features {
+    width: auto;
+    height: 348px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .features {
+    height: 550px;
+  }
+}
+
 .features .card {
   width: 210px;
 }
+@media screen and (min-width: 768px) {
+  .features .card .card-img:first-child img {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 992px) {
   .features .card {
-    width: 320px;
+    width: 270px;
   }
+  .features .card .card-img:first-child img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features .card .card-img:first-child img {
+    width: 120%;
+    -o-object-position: -22px 0;
+       object-position: -22px 0;
+  }
+}
+.features .card .card-img {
+  aspect-ratio: 4/3;
+  overflow: hidden;
 }
 .features .card p {
   font-family: "Raleway", sans;
@@ -359,8 +392,15 @@ main article {
 .features .card a:link, .features .card a:visited {
   color: #4BA87D;
 }
+
 .features .info {
-  width: 25rem;
+  flex-grow: 1;
+  max-width: 365px;
+}
+@media screen and (min-width: 1200px) {
+  .features .info {
+    max-width: initial;
+  }
 }
 .features .info h2 {
   font-family: "Playfair Display", sans-serif;
@@ -381,7 +421,7 @@ main article {
   font-family: "Raleway", sans;
   font-weight: 400;
   font-size: 12px;
-  padding-right: 3rem;
+  margin-top: 1.5rem;
 }
 @media screen and (min-width: 992px) {
   .features .info p {
