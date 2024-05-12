@@ -170,7 +170,6 @@ a:link, a:visited {
 }
 
 .hero-wrap {
-  box-shadow: 0 0 10px 5px red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,8 +177,13 @@ a:link, a:visited {
 @media screen and (min-width: 576px) {
   .hero-wrap {
     display: grid;
-    grid-template-columns: auto calc(445px - calc(2rem + 5vw));
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-wrap {
+    grid-template-columns: auto calc(445px - calc(2rem + 5vw));
   }
 }
 @media screen and (min-width: 992px) {
@@ -189,7 +193,6 @@ a:link, a:visited {
 }
 
 .hero .title {
-  border: 3px solid purple;
   z-index: 1;
 }
 @media screen and (min-width: 576px) {
@@ -221,9 +224,9 @@ a:link, a:visited {
 }
 
 .hero .content {
-  border: 3px solid green;
   z-index: 1;
   order: 1;
+  max-width: 300px;
 }
 @media screen and (min-width: 576px) {
   .hero .content {
@@ -233,9 +236,6 @@ a:link, a:visited {
   }
 }
 
-.hero .content-membrane {
-  border: 3px solid gold;
-}
 .hero .content-membrane p {
   font-family: "Raleway", sans;
   font-weight: 500;
@@ -262,9 +262,7 @@ a:link, a:visited {
 }
 
 .hero-img {
-  border: 3px solid navy;
   aspect-ratio: 16/9;
-  margin-top: calc(0px - 8rem);
   align-self: center;
   width: 300px;
 }

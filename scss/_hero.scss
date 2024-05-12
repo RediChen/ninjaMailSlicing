@@ -32,19 +32,21 @@ $img-w: (
 }
 
 .hero-wrap {
-	box-shadow: 0 0 10px 5px red;
-	//todo remove
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
 	@include rwd-above("sm") {
 		$l-width: auto;
-		$r-width: calc(#{map-get($img-w, "tablet")} - #{$img-offset});
+		$r-width: calc(#{map-get($img-w, "mobile")} - #{$img-offset});
 		display: grid;
-		grid-template-columns: $l-width $r-width;
-		// grid-template-columns: 2fr 1fr;
+		grid-template-columns: $l-width auto;
 		grid-template-rows: auto auto;
+	}
+	@include rwd-above("md") {
+		$l-width: auto;
+		$r-width: calc(#{map-get($img-w, "tablet")} - #{$img-offset});
+		grid-template-columns: $l-width $r-width;
 	}
 
 	@include rwd-above("lg") {
@@ -55,9 +57,6 @@ $img-w: (
 }
 
 .hero .title {
-	border: 3px solid purple;
-	//todo remove
-	// max-width: calc(#{map-get($img-w, 'mobile')} + 3vw);
 	z-index: 1;
 
 	@include rwd-above("sm") {
@@ -79,10 +78,9 @@ $img-w: (
 //  font-size:calc(1.525rem + 3.3vw)
 
 .hero .content {
-	border: 3px solid green;
-	//todo remove
 	z-index: 1;
 	order: 1;
+	max-width: map-get($img-w, "mobile");
 
 	@include rwd-above("sm") {
 		order: initial;
@@ -92,19 +90,11 @@ $img-w: (
 }
 
 .hero .content-membrane {
-	border: 3px solid gold;
-	//todo remove
-	// width: calc(15rem + 45vw);
-	// max-width: calc(32rem + 3vw);
-	// gap: 1rem;
-	// max-width: 33rem;
-
 	p {
 		@include ff-raleway(500, 14px, 12px, 19px);
 	}
 
 	button {
-		// padding: 0;
 		width: 140px;
 		border: 3px solid $color-prime;
 
@@ -115,10 +105,9 @@ $img-w: (
 }
 
 .hero-img {
-	border: 3px solid navy;
-	//todo remove
 	aspect-ratio: 16 / 9;
-	margin-top: calc(0px - 8rem);	
+	// margin-top: calc(0px - 8rem);
+	// padding-right: 6rem;	
 	align-self: center;
 	width: map-get($img-w, "mobile");
 
