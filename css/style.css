@@ -328,9 +328,6 @@ main article {
   justify-content: space-evenly;
   align-items: end;
 }
-.features .card:first-child {
-  align-self: start;
-}
 .features .card {
   width: 210px;
 }
@@ -368,11 +365,16 @@ main article {
 .features .info h2 {
   font-family: "Playfair Display", sans-serif;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
+}
+@media screen and (min-width: 576px) {
+  .features .info h2 {
+    font-size: 28px;
+  }
 }
 @media screen and (min-width: 992px) {
   .features .info h2 {
-    font-size: 28px;
+    font-size: 44px;
   }
 }
 .features .info p {

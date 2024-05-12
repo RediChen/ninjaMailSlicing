@@ -1,10 +1,15 @@
 .features {
-    // height: 450px;
     justify-content: space-evenly;
     align-items: end;
-    .card:first-child {
-        align-self: start;
-    }
+    
+    // height: 300px;
+    // @include rwd-above('md') {
+    //     width: 710px;
+    // }
+    // @include rwd-above('lg') {
+    //     width: 100%;
+    // }
+
     .card {
         width: 210px;
 
@@ -28,7 +33,7 @@
     .info {
         width: 25rem;
         h2 {
-            @include ff-plafairy(900, 44px, 28px);
+            @include ff-plafairy(900, 26px, 28px, 44px);
         }
         p {
             @include ff-raleway(400, 12px, 19px);
