@@ -294,9 +294,10 @@ main article {
 .reach-more {
   margin-inline: auto;
   aspect-ratio: 16/9;
-  background-image: url("../images/main-img.png");
+  background: center/cover url("../images/main-img.png");
   text-align: center;
   flex-direction: column;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .reach-more {
