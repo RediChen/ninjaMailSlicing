@@ -32,14 +32,15 @@
 	> div {
 		padding: 1rem;
 
-		* {
-			margin: 0;
-		}
+		// * {
+		// 	margin: 0;
+		// }
 
-		width: 100%;
+		width: 223px;
 		height: 157px;
 
 		@include rwd-above("lg") {
+			width: 341px;
 			height: 239px;
 		}
 
@@ -64,11 +65,11 @@
 		}
 
 		&:nth-child(2) {
-			background: center / cover url("../images/artilce4.png");
+			background: 25% center / 175% auto url("../images/artilce4.png");
 		}
 
 		&:nth-child(3) {
-			background: center / cover url("../images/artilce5.png");
+			background: 40% 90% / 150% url("../images/artilce5.png");
 		}
 	}
 }
