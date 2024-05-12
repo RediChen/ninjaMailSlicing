@@ -10,8 +10,11 @@
     background-color: $white;
     z-index: 99;
 
-    >.hstack {
+    .container-xl>.hstack {
         height: $top-header-h;
+        @include rwd-above('lg') {
+            height: $top-header-lg-h;
+        }
     }
 }
 
