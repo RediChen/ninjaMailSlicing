@@ -7,64 +7,70 @@
             └-nav + a.btn-fill
 */
 .top-header {
-    background-color: $white;
-    z-index: 99;
+	background-color: $white;
+	z-index: 99;
 
-    .container-xl>.hstack {
-        height: $top-header-h;
-        @include rwd-above('lg') {
-            height: $top-header-lg-h;
-        }
-    }
+	.container-xl > .hstack {
+		height: $top-header-h;
+		@include rwd-above("lg") {
+			height: $top-header-lg-h;
+		}
+	}
 }
 
 .top-logo {
-    margin-left: -30px;
+	margin-left: -30px;
+  cursor: pointer;
 
-    img {
-        height: 52px;
+	img {
+		height: 52px;
 
-        @include rwd-above('lg') {
-            height: 64px;
-        }
-    }
+		@include rwd-above("lg") {
+			height: 64px;
+		}
+	}
 
-    h1 {
-        margin-left: -22px;
-        @include ff-raleway(900, 22px, 35px);
-    }
+	h1 {
+		margin-left: -22px;
+		@include ff-raleway(900, 22px, 35px);
+	}
 }
 
 .top-btn-wrap {
-    max-width: 480px;
+	max-width: 480px;
 
-    @include rwd-above('lg') {
-        max-width: 680px;
-    }
+	@include rwd-above("lg") {
+		max-width: 680px;
+	}
 
-    >.btn-green {
-        padding-inline: 0.5rem;
-        @include font-size(11px, 17px);
-    }
+	> .btn-green {
+		padding-inline: 0.5rem;
+		@include font-size(11px, 17px);
+	}
 }
 
 .top-nav-ul {
-    margin: 0;
-    display: flex;
-    justify-content: space-evenly;
+	margin: 0;
+	display: flex;
+	justify-content: space-evenly;
 
-    a {
-        width: 70px;
+	a {
+		width: 70px;
 
-        @include rwd-above('lg') {
-            width: 110px;
-        }
+		@include rwd-above("lg") {
+			width: 110px;
+		}
 
-        display: block;
-        border-bottom: 6px solid $color-prime;
-        @include ff-raleway(800, 11px, 17px);
-        text-align: center;
-        color: $black;
-        letter-spacing: 1.27px;
-    }
+		display: block;
+		border-bottom: 6px solid $prime;
+		@include ff-raleway(800, 11px, 17px);
+		text-align: center;
+		color: $black;
+		letter-spacing: 1.27px;
+		transition: border-color 0.4s, padding 0.4s;
+	}
+	a:hover {
+		border-color: $prime-light-2;
+    padding-bottom: 4px;
+	}
 }

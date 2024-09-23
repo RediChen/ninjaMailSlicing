@@ -5,6 +5,7 @@
 	letter-spacing: 2.1px;
 	text-align: center;
 	border: none;
+	transition: background-color 0.4s;
 }
 
 // 字型大小設定
@@ -13,8 +14,7 @@
 		font-size: $size1;
 
 		@if ($size2 != 0) {
-			
-            @if ($size3 == 0) {
+			@if ($size3 == 0) {
 				@include rwd-above("lg") {
 					font-size: $size2;
 				}
@@ -47,7 +47,6 @@
 	font-family: "Playfair Display", sans-serif;
 	font-weight: $fw;
 	@include font-size($fz, $fz-sm, $fz-lg);
-
 }
 
 //module class
@@ -63,12 +62,19 @@
 
 .btn-green {
 	@include nj-btn;
-	background-color: $color-prime;
+	background-color: $prime;
 
 	&,
 	&:link,
 	&:visited {
 		color: white;
+	}
+
+	&:hover {
+		background-color: $prime-light-1;
+	}
+	&:active {
+		background-color: $prime-dark;
 	}
 }
 
@@ -79,6 +85,13 @@
 	&,
 	&:link,
 	&:visited {
-		color: $color-prime;
+		color: $prime;
+	}
+
+  &:hover {
+		background-color: $prime-light-5;
+	}
+  &:active {
+		background-color: $prime-light-4;
 	}
 }

@@ -10,9 +10,14 @@ html {
 }
 
 //THEME COLOR
-$white: #f2f2f2;
+$white: hsl(152, 15%, 95%);
 $black: #000;
-$color-prime: #4BA87D;
+$prime: hsl(152, 38%, 48%);
+$prime-light-1: hsl(152, 38%, 50%);
+$prime-light-2: hsl(152, 38%, 60%);
+$prime-light-4: hsl(152, 38%, 90%);
+$prime-light-5: hsl(152, 38%, 95%);
+$prime-dark: hsl(152, 38%, 45%);
 $top-header-h: 64px;
 $top-header-lg-h: 100px;
 

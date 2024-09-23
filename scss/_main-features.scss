@@ -1,5 +1,5 @@
 .features {
-    margin-inline: auto;
+	margin-inline: auto;
 	justify-content: space-evenly;
 	align-items: center;
 
@@ -7,11 +7,11 @@
 	@include rwd-above("md") {
 		width: auto;
 		// width: 710px;
-        height: 348px;
+		height: 348px;
 	}
 	@include rwd-above("lg") {
-        height: 550px;
-        // height: 348px;
+		height: 550px;
+		// height: 348px;
 	}
 }
 
@@ -22,47 +22,18 @@ $card-w: (
 ) !default;
 $scale-rate: 120%;
 .features .card {
-	width: map-get($card-w, 'mobile');
+	width: map-get($card-w, "mobile");
 
-	@include rwd-above("md") {
-        .card-img {
-    
-            &:first-child img {
-                width: 100%;
-                // object-position: -15px 0;
-            }
-        }
-	}
 	@include rwd-above("lg") {
-		width: map-get($card-w, 'lg'); 
-
-        .card-img {
-    
-            &:first-child img {
-                width: 100%;
-                // object-position: -15px 0;
-            }
-        }
-	}
-	@include rwd-above("xl") {
-        .card-img {
-    
-            &:first-child img {
-                width: $scale-rate;
-
-                $offset: calc( 0 - #{map-get($card-w, 'xl')} * 0.1 / 2);
-                // @error '$offset = ' + $offset;
-                object-position: -22px 0;
-            }
-        }
+		width: map-get($card-w, "lg");
 	}
 
-	
-
-	.card-img {
-        aspect-ratio: 4 / 3;
-		overflow: hidden;
+	transition: transform 0.4s;
+	&:hover {
+		transform: translateY(-4px);
 	}
+}
+.features .card {
 	p {
 		@include ff-raleway(500, 12px, 16px);
 	}
@@ -72,17 +43,39 @@ $scale-rate: 120%;
 
 		&:link,
 		&:visited {
-			color: $color-prime;
+			color: $prime;
+		}
+	}
+}
+.card-img {
+	aspect-ratio: 4 / 3;
+	overflow: hidden;
+
+	&:first-child img {
+		@include rwd-above("md") {
+			width: 100%;
+			// object-position: -15px 0;
+		}
+		@include rwd-above("lg") {
+			width: 100%;
+			// object-position: -15px 0;
+		}
+		@include rwd-above("xl") {
+			width: $scale-rate;
+
+			$offset: calc(0 - #{map-get($card-w, "xl")} * 0.1 / 2);
+			// @error '$offset = ' + $offset;
+			object-position: -22px 0;
 		}
 	}
 }
 
 .features .info {
-    flex-grow: 1;
+	flex-grow: 1;
 	max-width: 365px;
-    @include rwd-above("xl") {
-        max-width: initial;
-    }
+	@include rwd-above("xl") {
+		max-width: initial;
+	}
 
 	h2 {
 		@include ff-plafairy(900, 26px, 28px, 44px);
@@ -90,6 +83,6 @@ $scale-rate: 120%;
 	p {
 		@include ff-raleway(400, 12px, 19px);
 		// padding-right: 3rem;
-        margin-top: 1.5rem;
+		margin-top: 1.5rem;
 	}
 }
